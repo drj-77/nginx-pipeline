@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+    stages {
+        stage('Run pipeline-0') {
+            steps {
+                build job: 'pipeline-0'
+            }
+        }
+        stage('Run pipeline-1') {
+            steps {
+                build job: 'pipeline-1'
+            }
+        }
+        stage('Run pipeline-2') {
+            steps {
+                build job: 'pipeline-2'
+            }
+        }
+    }
+}
